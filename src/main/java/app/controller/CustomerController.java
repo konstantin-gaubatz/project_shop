@@ -57,7 +57,7 @@ public class CustomerController {
     }
 //    Вернуть среднюю стоимость продукта в корзине покупателя по его идентификатору (если он активен)
 
-    public double getCustomerAveragePrice(Long id) {
+    public double getCustomersCartAveragePrice(Long id) {
         return service.getCustomersCartAveragePrice(id);
     }
 //    Добавить товар в корзину покупателя по их идентификаторам (если оба активны)
