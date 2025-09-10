@@ -13,11 +13,7 @@ import java.util.List;
 public class CustomerService {
 
     private final CustomerRepository repository = new CustomerRepository();
-    private final ProductService productService;
-
-    public CustomerService(ProductService productService) {
-        this.productService = productService;
-    }
+    private final ProductService productService = ProductService.getInstance();
 
     //    Функционал сервиса покупателей.
 
