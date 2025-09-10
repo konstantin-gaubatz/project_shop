@@ -1,5 +1,6 @@
 package app.domain;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
@@ -8,7 +9,19 @@ public class Customer {
     private Long id;
     private String name;
     private boolean active;
-    private List<Product> cart;
+    private List<Product> cart = new ArrayList<>();
+
+    public String getName() {
+        return name;
+    }
+
+    public boolean isActive() {
+        return active;
+    }
+
+    public List<Product> getCart() {
+        return cart;
+    }
 
     public void setId(Long id) {
         this.id = id;
@@ -16,6 +29,10 @@ public class Customer {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public void setActive(boolean active) {
+        this.active = active;
     }
 
     @Override
